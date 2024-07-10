@@ -1,3 +1,4 @@
+import { getUserValues } from "./user-processing.js";
 
 const user = {
     id : 5,
@@ -7,4 +8,4 @@ const user = {
     studentId : "012345678"
 };
 
-console.log(Object.values(user).join("|"));
+console.log(getUserValues(user));
