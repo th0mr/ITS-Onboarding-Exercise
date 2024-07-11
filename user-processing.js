@@ -1,3 +1,10 @@
-export const getUserValues = (userObj) => {
-    return userObj.id + "|" + userObj.username + "|" + userObj.firstName + "|" + userObj.lastName + "|" + userObj.studentId;
-}
+export const getUserValues = (userObject) =>
+    userObject.id +
+    "|" +
+    userObject.username +
+    "|" +
+    userObject.firstName +
+    "|" +
+    userObject.lastName +
+    "|" +
+    userObject.studentId;
