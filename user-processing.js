@@ -1,1 +1,3 @@
-export const getUserValues = (userObj) => Object.values(userObj).join("|")
+export const getUserValues = (userObj) => {
+    return userObj.id + "|" + userObj.username + "|" + userObj.firstName + "|" + userObj.lastName + "|" + userObj.studentId;
+}
