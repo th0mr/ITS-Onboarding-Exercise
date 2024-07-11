@@ -1,0 +1,1 @@
+export const getUserValues = (userObj) => Object.values(userObj).join("|")
