@@ -1,3 +1,1 @@
-export function getUserValues(userObj){
-    return Object.values(userObj).join("|")
-}
+export const getUserValues = (userObj) => Object.values(userObj).join("|")
