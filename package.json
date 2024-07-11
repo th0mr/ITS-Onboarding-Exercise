@@ -11,6 +11,10 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "prettier": "3.3.2",
     "vitest": "^2.0.1"
+  },
+  "dependencies": {
+    "xo": "^0.58.0"
   }
 }
