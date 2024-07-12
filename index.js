@@ -1,4 +1,4 @@
-import { getUserValues } from "./user-processing.js";
+import { generateSnapshot } from "./generate-snapshot";
 
 const user = {
     id: 5,
@@ -8,4 +8,4 @@ const user = {
     studentId: "012345678",
 };
 
-console.log(getUserValues(user));
+generateSnapshot(user);

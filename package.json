@@ -15,6 +15,7 @@
   "devDependencies": {
     "prettier": "3.3.2",
     "vitest": "^2.0.1",
+    "vitest-when": "^0.4.1",
     "xo": "^0.58.0"
   }
 }
