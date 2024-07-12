@@ -1,4 +1,4 @@
-import { generateSnapshot } from "./generate-snapshot";
+import { generateSnapshot } from "./generate-snapshot.js";
 
 const user = {
     id: 5,
