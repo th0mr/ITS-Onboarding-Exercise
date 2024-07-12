@@ -1,7 +1,7 @@
-import { generateSnapshot } from "./generate-snapshot.js";
 import { expect, describe, it, vi } from "vitest";
 import { when } from "vitest-when";
 import { getUserValues } from "./user-processing.js";
+import { generateSnapshot } from "./generate-snapshot.js";
 
 vi.mock("./user-processing.js");
 
