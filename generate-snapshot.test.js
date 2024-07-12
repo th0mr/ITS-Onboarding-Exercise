@@ -15,5 +15,5 @@ describe("generateSnapshot", () => {
 
         expect(console.log).toHaveBeenCalledTimes(1);
         expect(console.log).toHaveBeenCalledWith("bar");
-    })
-})
+    });
+});
