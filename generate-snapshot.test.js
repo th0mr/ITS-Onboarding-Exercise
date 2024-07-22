@@ -1,4 +1,4 @@
-import { expect, describe, it, vi } from "vitest";
+import { expect, describe, it, vi, beforeEach, beforeAll } from "vitest";
 import { when } from "vitest-when";
 import { getUserValues } from "./user-processing.js";
 import { generateSnapshot } from "./generate-snapshot.js";
@@ -6,9 +6,12 @@ import { generateSnapshot } from "./generate-snapshot.js";
 vi.mock("./user-processing.js");
 
 describe("generateSnapshot", () => {
-    it("creates an empty snapshot when given no users", () => {
+    beforeEach(() => {
+        // Mock console.log
         console.log = vi.fn();
+    });
 
+    it("creates an empty snapshot when given no users", () => {
         generateSnapshot([]);
 
         expect(console.log).toHaveBeenCalledTimes(1);
@@ -19,8 +22,6 @@ describe("generateSnapshot", () => {
     });
 
     it("creates a snapshot with a single user", () => {
-        console.log = vi.fn();
-
         when(getUserValues).calledWith("user1").thenReturn("foo");
 
         generateSnapshot(["user1"]);
@@ -34,8 +35,6 @@ describe("generateSnapshot", () => {
     });
 
     it("creates a snapshot with multiple users", () => {
-        console.log = vi.fn();
-
         when(getUserValues).calledWith("user1").thenReturn("foo");
         when(getUserValues).calledWith("user2").thenReturn("bar");
 
