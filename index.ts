@@ -8,4 +8,4 @@ const user = {
     studentId: "012345678",
 };
 
-generateSnapshot(user);
+generateSnapshot([user]);
