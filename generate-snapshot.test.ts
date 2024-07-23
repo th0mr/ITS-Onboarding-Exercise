@@ -31,6 +31,7 @@ describe("generateSnapshot", () => {
         };
 
         when(getUserValues).calledWith(user1).thenReturn("foo");
+
         generateSnapshot([user1]);
 
         expect(console.log).toHaveBeenCalledTimes(2);

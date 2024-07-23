@@ -31,7 +31,7 @@ describe("getUserValues", () => {
     });
 
     it(`outputs user property values in the order id, username, firstName, lastName, studentId
-        regardless of the order oSf the input`, () => {
+        regardless of the order of the input`, () => {
         const user: User = {
             lastName: "smith",
             id: 5,
