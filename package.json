@@ -2,11 +2,14 @@
   "name": "its-onboarding-exercise",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "vitest --run",
     "checkFormatting": "prettier . --check",
-    "lint": "xo ."
+    "fixFormatting": "prettier . --write",
+    "lint": "xo .",
+    "build": "tsc",
+    "removeSidecar": "rimraf -g *.js && rimraf -g *.d.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,8 @@
   "type": "module",
   "devDependencies": {
     "prettier": "3.3.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.3",
     "vitest": "^2.0.1",
     "vitest-when": "^0.4.1",
     "xo": "^0.58.0"

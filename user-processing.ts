@@ -1,4 +1,4 @@
-export const getUserValues = (userObject) =>
+export const getUserValues = (userObject: User): string =>
     userObject.id +
     "|" +
     userObject.username +

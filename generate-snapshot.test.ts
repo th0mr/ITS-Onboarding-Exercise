@@ -22,9 +22,17 @@ describe("generateSnapshot", () => {
     });
 
     it("creates a snapshot with a single user", () => {
-        when(getUserValues).calledWith("user1").thenReturn("foo");
+        const user1: User = {
+            id: 1,
+            username: "abc123",
+            firstName: "fName1",
+            lastName: "lName1",
+            studentId: "123456789",
+        };
 
-        generateSnapshot(["user1"]);
+        when(getUserValues).calledWith(user1).thenReturn("foo");
+
+        generateSnapshot([user1]);
 
         expect(console.log).toHaveBeenCalledTimes(2);
         expect(console.log).toHaveBeenNthCalledWith(
@@ -35,10 +43,26 @@ describe("generateSnapshot", () => {
     });
 
     it("creates a snapshot with multiple users", () => {
-        when(getUserValues).calledWith("user1").thenReturn("foo");
-        when(getUserValues).calledWith("user2").thenReturn("bar");
+        const user1: User = {
+            id: 1,
+            username: "abc123",
+            firstName: "fName1",
+            lastName: "lName1",
+            studentId: "123456789",
+        };
 
-        generateSnapshot(["user1", "user2"]);
+        const user2: User = {
+            id: 2,
+            username: "xyz789",
+            firstName: "fName2",
+            lastName: "lName2",
+            studentId: "987654321",
+        };
+
+        when(getUserValues).calledWith(user1).thenReturn("foo");
+        when(getUserValues).calledWith(user2).thenReturn("bar");
+
+        generateSnapshot([user1, user2]);
 
         expect(console.log).toHaveBeenCalledTimes(3);
         expect(console.log).toHaveBeenNthCalledWith(
