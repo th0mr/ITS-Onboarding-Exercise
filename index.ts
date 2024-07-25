@@ -1,11 +1,4 @@
 import { generateSnapshot } from "./generate-snapshot.js";
+import { fetchUsers } from "./fetch-users.js";
 
-const user = {
-    id: 5,
-    username: "abc123",
-    firstName: "bob",
-    lastName: "smith",
-    studentId: "012345678",
-};
-
-generateSnapshot([user]);
+generateSnapshot(await fetchUsers());
