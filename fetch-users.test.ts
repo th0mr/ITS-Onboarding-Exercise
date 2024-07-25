@@ -17,12 +17,11 @@ describe("fetchUsers", () => {
 
         const userArray: User[] = await fetchUsers();
 
-        expect(userArray.length).toEqual(0);
         expect(userArray).toEqual([]);
         expect(fetch).toHaveBeenCalledTimes(1);
     });
 
-    it("it returns an empty array when the webhook contains users", async () => {
+    it("it returns a non-empty array when the webhook contains multiple users", async () => {
         const user1: User = {
             id: 1,
             username: "abc123",
@@ -45,7 +44,6 @@ describe("fetchUsers", () => {
 
         const userArray: User[] = await fetchUsers();
 
-        expect(userArray.length).toEqual(2);
         expect(userArray).toEqual([user1, user2]);
         expect(fetch).toHaveBeenCalledTimes(1);
     });
