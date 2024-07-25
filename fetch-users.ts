@@ -5,7 +5,5 @@ export const usersURL: string =
 
 export const fetchUsers = async (): Promise<User[]> => {
     const response: Response = await fetch(usersURL);
-    const data: User[] = (await response.json()) as User[];
-
-    return data;
+    return (await response.json()) as User[];
 };
