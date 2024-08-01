@@ -1,27 +1,34 @@
 {
-  "name": "its-onboarding-exercise",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "name": "test-cdk",
+  "version": "0.1.0",
+  "bin": {
+    "test-cdk": "bin/test-cdk.js"
+  },
   "scripts": {
     "test": "vitest --run",
     "checkFormatting": "prettier . --check",
     "fixFormatting": "prettier . --write",
     "lint": "xo .",
     "build": "tsc",
-    "removeSidecar": "rimraf -g *.js && rimraf -g *.d.ts"
+    "removeSidecar": "rimraf -g functions/snapshot/*.js && rimraf -g functions/snapshot/*.d.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
+    "@types/node": "20.14.9",
+    "aws-cdk": "2.150.0",
+    "esbuild": "^0.23.0",
     "node-fetch": "^3.3.2",
     "prettier": "3.3.2",
     "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
     "vitest": "^2.0.1",
     "vitest-when": "^0.4.1",
     "xo": "^0.58.0"
-  }
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.150.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  },
+  "type": "module"
 }
