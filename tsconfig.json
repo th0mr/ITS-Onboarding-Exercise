@@ -3,7 +3,7 @@
     "target": "ES2022",
     "module": "es2022",
     "moduleResolution": "Node",
-    "lib": ["es2020", "dom"],
+    "lib": ["es2022", "dom"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,

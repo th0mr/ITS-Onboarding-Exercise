@@ -1,6 +1,7 @@
 {
   "name": "test-cdk",
   "version": "0.1.0",
+  "type": "module",
   "bin": {
     "test-cdk": "bin/test-cdk.js"
   },
