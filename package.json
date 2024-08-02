@@ -10,7 +10,7 @@
     "fixFormatting": "prettier . --write",
     "lint": "xo .",
     "build": "tsc",
-    "removeSidecar": "rimraf -g ./*/*.js ./*/*.d.ts"
+    "removeSidecar": "rimraf -g ./**/*.js ./**/*.d.ts"
   },
   "devDependencies": {
     "@types/node": "20.14.9",
@@ -29,6 +29,5 @@
     "aws-cdk-lib": "2.150.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
-  },
-  "type": "module"
+  }
 }
