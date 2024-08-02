@@ -2,5 +2,18 @@
   "plugins": ["prettier"],
   "extends": ["prettier"],
   "envs": ["node", "es2022"],
-  "space": 4
+  "space": 4,
+  "rules": {
+    "max-params": [
+      "warn",
+      {
+        "max": 5
+      }
+    ],
+    "n/file-extension-in-import": "off",
+    "n/prefer-global/process": "off",
+    "no-await-in-loop": "off",
+    "no-new": "off",
+    "unicorn/prefer-node-protocol": "off"
+  }
 }
