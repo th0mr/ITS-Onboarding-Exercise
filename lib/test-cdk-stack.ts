@@ -9,7 +9,7 @@ export class TestCdkStack extends cdk.Stack {
 
         const lambda = new NodejsFunction(this, "snapshotLambda", {
             functionName: "generateSnapshotFromWebhook",
-            entry: "functions/snapshot/index.ts",
+            entry: "functions/snapshot/generate-snapshot-from-webhook.ts",
             handler: "generateSnapshotFromWebhook",
             runtime: Runtime.NODEJS_20_X,
             memorySize: 128,
