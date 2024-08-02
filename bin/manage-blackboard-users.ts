@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import "source-map-support/register.js";
 import * as cdk from "aws-cdk-lib";
-import { TestCdkStack } from "../lib/test-cdk-stack.js";
+import { ManageBlackboardUsersStack } from "../lib/manage-blackboard-users-stack.js";
 
 const app = new cdk.App();
-new TestCdkStack(app, "TestCdkStack", {
+new ManageBlackboardUsersStack(app, "ManageBlackboardUsersStack", {
     /* If you don't specify 'env', this stack will be environment-agnostic.
      * Account/Region-dependent features and context lookups will not work,
      * but a single synthesized template can be deployed anywhere. */

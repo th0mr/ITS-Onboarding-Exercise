@@ -1,5 +1,5 @@
 {
-  "name": "test-cdk",
+  "name": "manage-blackboard-users",
   "version": "0.1.0",
   "type": "module",
   "bin": {

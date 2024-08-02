@@ -3,7 +3,7 @@ import type { Construct } from "constructs";
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 
-export class TestCdkStack extends cdk.Stack {
+export class ManageBlackboardUsersStack extends cdk.Stack {
     constructor(scope: Construct, id: string, properties?: cdk.StackProps) {
         super(scope, id, properties);
 
