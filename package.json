@@ -10,7 +10,7 @@
     "fixFormatting": "prettier . --write",
     "lint": "xo .",
     "build": "tsc",
-    "removeSidecar": "rimraf -g functions/snapshot/*.js && rimraf -g functions/snapshot/*.d.ts"
+    "removeSidecar": "rimraf -g ./*/*.js ./*/*.d.ts"
   },
   "devDependencies": {
     "@types/node": "20.14.9",

@@ -3,10 +3,7 @@
     "target": "ES2022",
     "module": "es2022",
     "moduleResolution": "Node",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "declaration": true,
@@ -23,12 +20,7 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules/@types"
-    ]
+    "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": [
-    "node_modules",
-    "cdk.out"
-  ]
+  "exclude": ["node_modules", "cdk.out"]
 }

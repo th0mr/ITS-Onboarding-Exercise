@@ -1,13 +1,11 @@
-import * as cdk from 'aws-cdk-lib';
-import {Construct} from 'constructs';
-import {NodejsFunction} from "aws-cdk-lib/aws-lambda-nodejs";
-import {Runtime} from "aws-cdk-lib/aws-lambda";
-
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import * as cdk from "aws-cdk-lib";
+import type { Construct } from "constructs";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
+import { Runtime } from "aws-cdk-lib/aws-lambda";
 
 export class TestCdkStack extends cdk.Stack {
-    constructor(scope: Construct, id: string, props?: cdk.StackProps) {
-        super(scope, id, props);
+    constructor(scope: Construct, id: string, properties?: cdk.StackProps) {
+        super(scope, id, properties);
 
         const lambda = new NodejsFunction(this, "snapshotLambda", {
             functionName: "generateSnapshotFromWebhook",
@@ -16,7 +14,5 @@ export class TestCdkStack extends cdk.Stack {
             runtime: Runtime.NODEJS_20_X,
             memorySize: 128,
         });
-
-
     }
 }

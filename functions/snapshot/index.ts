@@ -5,4 +5,4 @@ export const generateSnapshotFromWebhook = async (): Promise<void> => {
     generateSnapshot(await fetchUsers());
 };
 
-generateSnapshotFromWebhook();
+await generateSnapshotFromWebhook().then();
