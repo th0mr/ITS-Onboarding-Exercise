@@ -1,14 +1,13 @@
-// Taken from ds-vle-cloud-integrations and adapted include, exclude for this project
 {
   "compilerOptions": {
-    "target": "es2022",
+    "target": "ES2022",
     "module": "es2022",
     "moduleResolution": "Node",
     "lib": ["es2022", "dom"],
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "declaration": true,
     "strict": true,
-    "skipLibCheck": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -23,6 +22,5 @@
     "strictPropertyInitialization": false,
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cdk.out"]
 }

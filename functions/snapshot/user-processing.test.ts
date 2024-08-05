@@ -1,9 +1,10 @@
 import { expect, describe, it } from "vitest";
 import { getUserValues } from "./user-processing.js";
+import type { User } from "./types.js";
 
 describe("getUserValues", () => {
     it("seperates user values with a bar", () => {
-        const user = {
+        const user: User = {
             id: 5,
             username: "abc123",
             firstName: "bob",

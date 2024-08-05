@@ -2,5 +2,14 @@
   "plugins": ["prettier"],
   "extends": ["prettier"],
   "envs": ["node", "es2022"],
-  "space": 4
+  "space": 4,
+  "rules": {
+    "max-params": [
+      "warn",
+      {
+        "max": 5
+      }
+    ],
+    "no-new": "off"
+  }
 }
