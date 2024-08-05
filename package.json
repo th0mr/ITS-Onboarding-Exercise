@@ -11,7 +11,7 @@
     "fixFormatting": "prettier . --write",
     "lint": "xo .",
     "build": "tsc",
-    "removeSidecar": "rimraf -g ./**/*.js ./**/*.d.ts"
+    "removeSidecar": "rimraf -g ./!(node_modules)/**/*.js ./!(node_modules)/**/*.js"
   },
   "devDependencies": {
     "@types/node": "20.14.9",
