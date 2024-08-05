@@ -1,6 +1,7 @@
 import { beforeEach, describe, it, vi, expect } from "vitest";
 import fetch, { type Response } from "node-fetch";
 import { fetchUsers } from "./fetch-users.js";
+import type { User } from "./types.js";
 
 vi.mock("node-fetch");
 
