@@ -9,7 +9,7 @@ describe("ManageBlackboardUsersStack", () => {
         // and [ASSET ZIP] to prevent breaking a snapshot test everytime the source code for the lambda is changed
 
         // Expected patterns for buckets and asset strings in the snapshots
-        const bucketMatch =  /cdk-[\da-z]{9}-assets-.*/;
+        const bucketMatch = /cdk-[\da-z]{9}-assets-.*/;
         const assetMatch = /[\da-f]{64}\.zip/;
 
         expect.addSnapshotSerializer({
@@ -19,7 +19,7 @@ describe("ManageBlackboardUsersStack", () => {
                     assetMatch.exec(value) !== null),
             print(value) {
                 // Substitute both the bucket part and the asset zip part
-                let sval = `${value}`;
+                let sval = `${value as string}`;
                 sval = sval.replace(bucketMatch, "[ASSET BUCKET]");
                 sval = sval.replace(assetMatch, "[ASSET ZIP]");
                 return `"${sval}"`;
