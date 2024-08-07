@@ -3,6 +3,9 @@ import type { Construct } from "constructs";
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import { Tags } from "aws-cdk-lib";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export class ManageBlackboardUsersStack extends cdk.Stack {
     constructor(scope: Construct, id: string, properties?: cdk.StackProps) {
@@ -14,6 +17,9 @@ export class ManageBlackboardUsersStack extends cdk.Stack {
             handler: "generateSnapshotFromWebhook",
             runtime: Runtime.NODEJS_20_X,
             memorySize: 128,
+            environment: {
+                "WEBHOOK_URL": process.env.WEBHOOK_URL ?? ""
+            },
         });
 
         // Add tags to entire stack and all resources
