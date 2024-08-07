@@ -18,7 +18,7 @@ export class ManageBlackboardUsersStack extends cdk.Stack {
             runtime: Runtime.NODEJS_20_X,
             memorySize: 128,
             environment: {
-                "WEBHOOK_URL": process.env.WEBHOOK_URL ?? ""
+                WEBHOOK_URL: process.env.WEBHOOK_URL ?? "",
             },
         });
 
