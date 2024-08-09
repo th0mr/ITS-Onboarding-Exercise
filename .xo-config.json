@@ -10,6 +10,8 @@
         "max": 5
       }
     ],
-    "no-new": "off"
+    "no-new": "off",
+    "n/prefer-global/process": "off",
+    "@typescript-eslint/naming-convention": "off"
   }
 }

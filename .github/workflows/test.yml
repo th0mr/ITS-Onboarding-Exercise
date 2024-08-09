@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  check-format:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the application's source code
@@ -23,3 +23,5 @@ jobs:
       - name: Check code passes the unit tests
         run: npm run test
         working-directory: .
+        env:
+          USER_API_ENDPOINT: https://webhook.site/e8402416-3786-4d0d-b860-0fa6848b154c

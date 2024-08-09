@@ -21,6 +21,11 @@ exports[`ManageBlackboardUsersStack > matches the snapshot 1`] = `
           },
           "S3Key": "[ASSET ZIP]",
         },
+        "Environment": {
+          "Variables": {
+            "USER_API_ENDPOINT": "https://webhook.site/e8402416-3786-4d0d-b860-0fa6848b154c",
+          },
+        },
         "FunctionName": "generateSnapshotFromWebhook",
         "Handler": "index.generateSnapshotFromWebhook",
         "MemorySize": 128,
