@@ -9,20 +9,22 @@ describe("fetchUsers", () => {
     beforeEach(() => {
         // Reset the mock before each test run to ensure number of calls is reset back to 0 after each test
         vi.mocked(fetch).mockReset();
-        // Set environment variable WEBHOOK_URL to "mockUrl" so the tests run regardless of the state of .env
-        process.env.WEBHOOK_URL = "mockUrl";
+        // Set environment variable USER_API_ENDPOINT to "mockUrl" so the tests run regardless of the state of .env
+        process.env.USER_API_ENDPOINT = "mockUrl";
     });
 
-    it("The function does not fetch if the WEBHOOK_URL environment variable is unset", async () => {
+    it("The function does not fetch if the USER_API_ENDPOINT environment variable is unset", async () => {
         // Delete the environment variable from process.env
-        delete process.env.WEBHOOK_URL;
+        delete process.env.USER_API_ENDPOINT;
 
         // We expect that no fetch has been attempted and an error was thrown
-        await expect(fetchUsers()).rejects.toThrowError();
+        await expect(fetchUsers()).rejects.toThrowError(
+            "The environment variable USER_API_ENDPOINT is undefined in .env",
+        );
         expect(fetch).toHaveBeenCalledTimes(0);
     });
 
-    it("uses the webhook stored in the environment variable WEBHOOK_URL", async () => {
+    it("uses the webhook stored in the environment variable USER_API_ENDPOINT", async () => {
         vi.mocked(fetch).mockResolvedValue({
             json: async () => [],
         } as Response);
@@ -30,7 +32,7 @@ describe("fetchUsers", () => {
         await fetchUsers();
 
         // Check that the mock fetch function was called with the value of the environment variable
-        expect(fetch).toHaveBeenCalledWith(process.env.WEBHOOK_URL);
+        expect(fetch).toHaveBeenCalledWith("mockUrl");
     });
 
     it("it returns an empty array when the webhook is empty", async () => {

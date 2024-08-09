@@ -5,10 +5,10 @@ import type { User } from "./types.js";
 dotenv.config();
 
 export const fetchUsers = async (): Promise<User[]> => {
-    const usersUrl = process.env.WEBHOOK_URL;
+    const usersUrl = process.env.USER_API_ENDPOINT;
     if (usersUrl === undefined) {
         throw new Error(
-            "The environment variable WEBHOOK_URL is undefined in .env",
+            "The environment variable USER_API_ENDPOINT is undefined in .env",
         );
     } else {
         const response: Response = await fetch(usersUrl);

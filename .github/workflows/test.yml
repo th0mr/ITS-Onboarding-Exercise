@@ -24,4 +24,4 @@ jobs:
         run: npm run test
         working-directory: .
         env:
-          WEBHOOK_URL: https://webhook.site/6b495c5d-95b3-40b1-b85d-49dcf76a3d44
+          USER_API_ENDPOINT: https://webhook.site/e8402416-3786-4d0d-b860-0fa6848b154c
